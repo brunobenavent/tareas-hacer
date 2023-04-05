@@ -23,7 +23,7 @@ const mostrarMenu = () =>{
         
             })
         
-            readline.question('Seleccione una opción: ', (opt) =>{
+            readline.question('Seleccione una opción: ', opt =>{
                 readline.close();
                 resolve(opt)
             })
@@ -42,7 +42,7 @@ const pausa = () => {
         })
         readline.question(`\nPresione ${'ENTER:'.green} para continuar\n`, (opt) =>{
             readline.close();
-            resolve(opt)
+            resolve()
         })
 
 
