@@ -1,7 +1,7 @@
 import colors from 'colors';
 import { inquirerMenu, leerInput, pausa } from './helpers/inquirer.js';
 
-import Tareas from './helpers/models/tareas.js';
+import Tareas from './models/tareas.js';
  
 console.clear()
 
