@@ -1,4 +1,3 @@
-import colors from 'colors';
 import { inquirerMenu, leerInput, pausa, listadoTareasBorrar, confirmar, mostrarListadoChecklist } from './helpers/inquirer.js';
 
 import Tareas from './models/tareas.js';
@@ -41,9 +40,12 @@ const main = async() =>{
                 break;
             case '6':
                 const id = await listadoTareasBorrar(tareas.listadoArr)
-                if(!id==='0'){
+                console.log(id)
+                if(id !== '0' ){
+                    console.log(id)
                     const ok = await confirmar('¿está seguro?')
                     if(ok){
+                        console.log(id+"ana")
                         tareas.borrarTarea(id);
                         console.log('tarea borrada correctamente')
                     }
