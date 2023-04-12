@@ -40,18 +40,14 @@ const main = async() =>{
                 break;
             case '6':
                 const id = await listadoTareasBorrar(tareas.listadoArr)
-                console.log(id)
                 if(id !== '0' ){
-                    console.log(id)
                     const ok = await confirmar('¿está seguro?')
                     if(ok){
-                        console.log(id+"ana")
                         tareas.borrarTarea(id);
                         console.log('tarea borrada correctamente')
                     }
-                
                 }
-                break;
+                break; 
 
         }       
         guardarDB(tareas.listadoArr)
